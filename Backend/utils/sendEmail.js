@@ -3,15 +3,17 @@ import {
   mailerTransporter
 } from "../Config/mailer.js";
 
-export const sendEmail = async (to,subject,html) => {
+export const sendEmail = async (
+  to,
+  subject,
+  html
+) => {
 
   try {
 
-    // Email options
     const mailOptions = {
 
-      from:
-        emailFrom,
+      from: emailFrom,
 
       to,
 
@@ -21,21 +23,27 @@ export const sendEmail = async (to,subject,html) => {
 
     };
 
-    // Send email
-    await mailerTransporter.sendMail(
-      mailOptions
-    );
+    const info =
+      await mailerTransporter.sendMail(
+        mailOptions
+      );
 
     console.log(
       "Email sent successfully"
     );
 
-  } catch (error) {
+    return info;
+
+  }
+
+  catch (error) {
 
     console.log(
       "EMAIL ERROR:",
       error
     );
+
+    throw error;
 
   }
 
@@ -44,17 +52,27 @@ export const sendEmail = async (to,subject,html) => {
 export const sendEmailInBackground =
   (to, subject, html) => {
 
-    setImmediate(() => {
-      sendEmail(
-        to,
-        subject,
-        html
-      ).catch((error) =>
+    setImmediate(async () => {
+
+      try {
+
+        await sendEmail(
+          to,
+          subject,
+          html
+        );
+
+      }
+
+      catch (error) {
+
         console.log(
           "EMAIL BACKGROUND ERROR:",
           error.message
-        )
-      );
+        );
+
+      }
+
     });
 
   };
