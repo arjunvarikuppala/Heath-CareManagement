@@ -981,6 +981,7 @@ function UserManagement({
 
           <form
             onSubmit={updateUser}
+            autoComplete="off"
             className="w-full
             max-w-3xl
             bg-[#050816]
@@ -1122,6 +1123,7 @@ function UserManagement({
               <input
                 type="email"
                 name="email"
+                autoComplete="off"
                 value={editForm.email || ""}
                 onChange={handleEditChange}
                 placeholder="Email"
@@ -1131,6 +1133,7 @@ function UserManagement({
               <input
                 type="password"
                 name="oldPassword"
+                autoComplete="current-password"
                 value={editForm.oldPassword || ""}
                 onChange={handleEditChange}
                 placeholder="Old Password"
@@ -1143,6 +1146,7 @@ function UserManagement({
               <input
                 type="password"
                 name="password"
+                autoComplete="new-password"
                 value={editForm.password || ""}
                 onChange={handleEditChange}
                 placeholder="New Password"

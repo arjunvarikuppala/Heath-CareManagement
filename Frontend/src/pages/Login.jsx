@@ -171,6 +171,8 @@ function Login() {
                 onFormSubmit
               )}
 
+              autoComplete="on"
+
               className="mt-12 flex flex-col gap-6"
 
             >
@@ -188,6 +190,8 @@ function Login() {
                 <input
 
                   type="email"
+
+                  autoComplete="username"
 
                   placeholder="Enter email"
 
@@ -230,6 +234,8 @@ function Login() {
                 <input
 
                   type="password"
+
+                  autoComplete="current-password"
 
                   placeholder="Enter password"
 

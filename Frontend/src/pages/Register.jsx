@@ -8,9 +8,6 @@ import {
 } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {
-  useAuthStore
-} from "../store/AuthStore";
 
 const BASE_URL =
   import.meta.env.VITE_API_URL;
@@ -310,8 +307,7 @@ function Register() {
 
         // API CALL
 
-        const res =
-          await axios.post(
+        await axios.post(
 
 `${BASE_URL}/patient-api/register`,
 
@@ -327,20 +323,13 @@ function Register() {
 
           );
 
-        localStorage.setItem(
-          "currentUser",
-          JSON.stringify(res.data.payload)
+        localStorage.removeItem(
+          "currentUser"
         );
 
-        useAuthStore.setState({
-          currentUser:
-            res.data.payload,
-          isAuthenticated: true,
-          authChecked: true,
-          error: null
+        navigate("/login", {
+          replace: true
         });
-
-        navigate("/patient");
 
       }
 
@@ -553,6 +542,8 @@ function Register() {
               onSubmit={handleSubmit(
                 onFormSubmit
               )}
+
+              autoComplete="off"
 
               className="mt-8
               flex flex-col gap-4"
@@ -819,6 +810,8 @@ function Register() {
                 <input
 
                   type="email"
+
+                  autoComplete="off"
 
                   placeholder=
                   "Enter email"

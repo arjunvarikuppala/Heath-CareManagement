@@ -45,6 +45,7 @@ function ForgotPassword() {
     <div className="min-h-screen bg-[#050816] text-white flex items-center justify-center px-6">
       <form
         onSubmit={handleSubmit}
+        autoComplete="on"
         className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-white/5 p-8"
       >
         <h1 className="text-4xl font-black">
@@ -61,6 +62,7 @@ function ForgotPassword() {
         <input
           required
           type="email"
+          autoComplete="email"
           value={email}
           onChange={(event) =>
             setEmail(event.target.value)

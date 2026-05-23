@@ -64,6 +64,24 @@ const accountFields = [
   }
 ];
 
+const getFieldAutoComplete = (field) => {
+
+  if (field.name === "password") {
+
+    return "new-password";
+
+  }
+
+  if (field.name === "email") {
+
+    return "off";
+
+  }
+
+  return "off";
+
+};
+
 function AdminRegisterForm({
   title,
   endpoint,
@@ -224,6 +242,8 @@ function AdminRegisterForm({
             onSubmit
           )}
 
+          autoComplete="off"
+
           className="mt-10
           grid grid-cols-2
           gap-6"
@@ -272,6 +292,9 @@ function AdminRegisterForm({
                 <input
                   key={field.name}
                   type={field.type}
+                  autoComplete={getFieldAutoComplete(
+                    field
+                  )}
                   placeholder={field.placeholder}
 
                   {...register(field.name)}

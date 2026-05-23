@@ -47,6 +47,7 @@ function ResetPassword() {
     <div className="min-h-screen bg-[#050816] text-white flex items-center justify-center px-6">
       <form
         onSubmit={handleSubmit}
+        autoComplete="off"
         className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-white/5 p-8"
       >
         <h1 className="text-4xl font-black">
@@ -64,6 +65,7 @@ function ResetPassword() {
           required
           minLength={6}
           type="password"
+          autoComplete="new-password"
           value={password}
           onChange={(event) =>
             setPassword(event.target.value)

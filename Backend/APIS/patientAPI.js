@@ -1,6 +1,5 @@
 import exp from "express";
 import { hash } from "bcryptjs";
-import jwt from "jsonwebtoken";
 
 import { userModel }
 from "../Models/userModel.js";
@@ -28,8 +27,7 @@ from "../Config/cloudinaryUpload.js";
 import cloudinary
 from "../Config/cloudinary.js";
 import {
-  getAuthCookieOptions,
-  TOKEN_EXPIRES_IN
+  getAuthCookieOptions
 } from "../Config/authCookie.js";
 import {
   notifyAppointmentsChanged
@@ -176,24 +174,8 @@ patientRoute.post(
           "patient-registration"
       });
 
-      const token =
-        jwt.sign(
-          {
-            userId:
-              newPatient._id,
-            role:
-              newPatient.role
-          },
-          process.env.JWT_SECRET,
-          {
-            expiresIn:
-              TOKEN_EXPIRES_IN
-          }
-        );
-
-      res.cookie(
+      res.clearCookie(
         "token",
-        token,
         getAuthCookieOptions()
       );
 
