@@ -1,0 +1,180 @@
+### Patient Register
+POST http://localhost:3000/patient-api/register
+Content-Type: application/json
+
+{
+  "name":"Geeta",
+  "phone":"9876543210",
+  "age":21,
+  "email":"geeta@gmail.com",
+  "password":"123456",
+  "profilePhoto":"https://example.com/geeta.jpg"
+}
+
+### Patient Register
+POST http://localhost:3000/patient-api/register
+Content-Type: application/json
+
+{
+  "name":"Spu",
+  "phone":"1234567891",
+  "age":18,
+  "email":"spu@gmail.com",
+  "password":"apu123",
+  "profilePhoto":"https://example.com/spu.jpg"
+}
+
+
+
+### Patient Login
+POST http://localhost:3000/common-api/authenticate
+Content-Type: application/json
+
+{
+  "email":"spu@gmail.com",
+  "password":"apu123"
+}
+
+###admin login
+POST http://localhost:3000/common-api/authenticate
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin123"
+}
+
+###Doctor login
+POST http://localhost:3000/common-api/authenticate
+Content-Type: application/json
+
+{
+  "email": "ravi@gmail.com",
+  "password": "123456"
+}
+
+
+###Receptionist login
+POST http://localhost:3000/common-api/authenticate
+Content-Type: application/json
+
+{
+  "email": "priya@gmail.com",
+  "password": "123456"
+}
+
+### Create Doctor
+POST http://localhost:3000/admin-api/create-doctor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOTNjNDBiNjk2MWQzYTBmNjVkZDciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzkwNzk5MTQsImV4cCI6MTc3OTA4MzUxNH0.uHO02LHYk7eW9HYFa3ZX-TCHJfZerx4UfmbuNb1ZTmo
+
+{
+  "name":"Dr Ravi",
+  "phone":"9876543210",
+  "age":45,
+  "email":"ravi@gmail.com",
+  "password":"123456",
+  "profilePhoto":"https://example.com/doctor.jpg"
+}
+
+### Create Doctor
+POST http://localhost:3000/admin-api/create-doctor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOTNjNDBiNjk2MWQzYTBmNjVkZDciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzkwODMyMjksImV4cCI6MTc3OTA4NjgyOX0.0dAw9H8AZCpENe3ZEXD4XuAe_L6SEU573CD0VUwmZMA
+
+{
+  "name":"Dr Sai",
+  "phone":"9876543123",
+  "age":32,
+  "email":"sai@gmail.com",
+  "password":"sai123",
+  "profilePhoto":"https://example.com/doctor.jpg"
+}
+
+### Create Receptionist
+POST http://localhost:3000/admin-api/create-receptionist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOTNjNDBiNjk2MWQzYTBmNjVkZDciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzkwODAyMzIsImV4cCI6MTc3OTA4MzgzMn0.mpMlJNFd2Ixkk2BCf_fQ7b1PVfJZEOjlg8F9KHJhQ34
+
+{
+  "name":"Priya",
+  "phone":"9876543211",
+  "age":28,
+  "email":"priya@gmail.com",
+  "password":"123456",
+  "profilePhoto":"https://example.com/priya.jpg"
+}
+
+### Block User
+PUT http://localhost:3000/admin-api/block-user/6a0a90e6a52f117179d884fa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOTNjNDBiNjk2MWQzYTBmNjVkZDciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzkwODAyMzIsImV4cCI6MTc3OTA4MzgzMn0.mpMlJNFd2Ixkk2BCf_fQ7b1PVfJZEOjlg8F9KHJhQ34
+
+### Unblock User
+PUT http://localhost:3000/admin-api/unblock-user/6a0a90e6a52f117179d884fa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOTNjNDBiNjk2MWQzYTBmNjVkZDciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzkwODAyMzIsImV4cCI6MTc3OTA4MzgzMn0.mpMlJNFd2Ixkk2BCf_fQ7b1PVfJZEOjlg8F9KHJhQ34
+
+### Book Appointment(patient)
+POST http://localhost:3000/patient-api/book-appointment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBiZjU2MTZlMDliNTM3ZGVmNTQ5OTMiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTc3OTI1MDEwMiwiZXhwIjoxNzc5MjUzNzAyfQ.213sM5Lx2ZxCpi1e5KKtspjy1K3npc3_3cWKh_K0taM
+
+{
+  "doctorId":"6a0aa81c143d1534d3a1cf68",
+
+  "appointmentDate":"2026-05-25",
+
+  "appointmentTime":"10:30 AM",
+
+  "reason":"Fever and headache"
+}
+
+### Doctor Appointments
+GET http://localhost:3000/doctor-api/my-appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOWE4ODllYzJkYTMxOTlmOTVlYjEiLCJyb2xlIjoiZG9jdG9yIiwiaWF0IjoxNzc5MTY0MDI4LCJleHAiOjE3NzkxNjc2Mjh9.AOQAyhcuVjnu9dIS9BLfzFtss_KwpXgE7ODPkgwbFDM
+
+###Appointmen Status update
+PUT http://localhost:3000/doctor-api/update-appointment-status/6a0bde50175bd14af4b026d0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOWE4ODllYzJkYTMxOTlmOTVlYjEiLCJyb2xlIjoiZG9jdG9yIiwiaWF0IjoxNzc5MTY0MDI4LCJleHAiOjE3NzkxNjc2Mjh9.AOQAyhcuVjnu9dIS9BLfzFtss_KwpXgE7ODPkgwbFDM
+
+{
+  "status":"approved"
+}
+
+### Receptionist Create Appointment
+POST http://localhost:3000/receptionist-api/create-appointment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOWM0ZjllYzJkYTMxOTlmOTVlYjYiLCJyb2xlIjoicmVjZXB0aW9uaXN0IiwiaWF0IjoxNzc5MTY2NDY1LCJleHAiOjE3NzkxNzAwNjV9.xGvcfJ2CA2W3RBGJEOVMsJNVYvVZ0QQBBkbRnkeM3-c
+
+{
+  "patientId":"6a0a90e6a52f117179d884fa",
+
+  "doctorId":"6a0a9a889ec2da3199f95eb1",
+
+  "appointmentDate":"2026-05-25",
+
+  "appointmentTime":"11:00 AM",
+
+  "reason":"General Checkup"
+}
+
+### Cancel Appointment(receptionist)
+PUT http://localhost:3000/receptionist-api/cancel-appointment/6a0bed1b5660d61aa47d7685
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOWM0ZjllYzJkYTMxOTlmOTVlYjYiLCJyb2xlIjoicmVjZXB0aW9uaXN0IiwiaWF0IjoxNzc5MjQ5ODc2LCJleHAiOjE3NzkyNTM0NzZ9.AaFOrlJDIu2x_e2d1MpDUycdOjuk0Oao5UrLiGwPBRM
+
+### Patient Cancel Appointment
+PUT http://localhost:3000/patient-api/cancel-appointment/6a0d33f6eb675707156c42ef
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBiZjU2MTZlMDliNTM3ZGVmNTQ5OTMiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTc3OTI1MDEwMiwiZXhwIjoxNzc5MjUzNzAyfQ.213sM5Lx2ZxCpi1e5KKtspjy1K3npc3_3cWKh_K0taM
+
+### Patient My Appointments
+GET http://localhost:3000/patient-api/my-appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBiZjU2MTZlMDliNTM3ZGVmNTQ5OTMiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTc3OTI1MDEwMiwiZXhwIjoxNzc5MjUzNzAyfQ.213sM5Lx2ZxCpi1e5KKtspjy1K3npc3_3cWKh_K0taM
+
+### Receptionist Dashboard
+GET http://localhost:3000/receptionist-api/all-appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBhOWM0ZjllYzJkYTMxOTlmOTVlYjYiLCJyb2xlIjoicmVjZXB0aW9uaXN0IiwiaWF0IjoxNzc5MjQ5ODc2LCJleHAiOjE3NzkyNTM0NzZ9.AaFOrlJDIu2x_e2d1MpDUycdOjuk0Oao5UrLiGwPBRM
+
+### Test Email
+GET http://localhost:3000/common-api/test-email
