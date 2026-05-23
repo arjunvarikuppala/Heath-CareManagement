@@ -192,6 +192,9 @@ function Register() {
   try {
 
     console.log("Sending request...");
+    console.log(
+  `${BASE_URL}/common-api/send-registration-verification`
+);
 
     const res = await axios.post(
 
