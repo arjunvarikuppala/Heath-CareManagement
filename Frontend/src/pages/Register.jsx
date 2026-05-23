@@ -201,14 +201,20 @@ function Register() {
         );
         setVerificationRequested(true);
 
-      } catch (err) {
+      } catch (error) {
 
-        setVerificationMessage(
-          err.response?.data?.message ||
-          "Unable to send verification link"
-        );
+  console.log(error);
 
-      }
+  console.log(error.response);
+
+  console.log(error.response?.data);
+
+  setError(
+    error.response?.data?.message ||
+    "Unable to send verification link"
+  );
+
+}
 
     };
 
