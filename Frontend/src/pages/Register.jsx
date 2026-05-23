@@ -193,6 +193,9 @@ function Register() {
             `${BASE_URL}/common-api/send-registration-verification`,
             {
               email: emailValue
+            },
+            {
+              withCredentials: true,
             }
           );
 
@@ -209,10 +212,14 @@ function Register() {
 
   console.log(error.response?.data);
 
-  setError(
-    error.response?.data?.message ||
-    "Unable to send verification link"
-  );
+  const message =
+  error.response?.data?.message ||
+  error.message ||
+  "Unable to send verification link";
+
+console.log(message);
+
+setVerificationMessage(message);
 
 }
 
