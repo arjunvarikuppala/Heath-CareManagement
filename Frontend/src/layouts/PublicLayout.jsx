@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Navbar from '../Components/AdminNavBar'
+import Sidebar from '../Components/AdminSidebar'
 
 import { Outlet } from "react-router-dom";
 

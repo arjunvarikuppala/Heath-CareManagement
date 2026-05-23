@@ -7,7 +7,7 @@ import {
 from "react-router-dom";
 
 import AdminNavbar
-from "../Components/AdminNavbar";
+from '../Components/AdminNavBar';
 
 import AdminSidebar
 from "../Components/AdminSidebar";
