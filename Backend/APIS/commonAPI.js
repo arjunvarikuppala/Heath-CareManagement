@@ -326,9 +326,10 @@ commonRoute.post(
             "Verify Your CareSync Email",
             `<p>Please verify your email before registration.</p><a href="${verifyLink}">Verify Email</a>`
           );
-            return res.status(200).json({
+
+          return res.status(200).json({
   success: true,
-  message: "Verification route working"
+  message: "Verification email sent successfully"
 });
       return res.status(200).json({
         success: true,
