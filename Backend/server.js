@@ -20,7 +20,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: ["http://localhost:5173"],
+  origin: ["http://localhost:5173", "https://heath-care-management-8ll3au3k4-geetavarshinis-projects.vercel.app", "https://heath-care-management.vercel.app"],
   credentials: true
 }));
 app.use(express.json({
