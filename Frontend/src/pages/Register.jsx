@@ -169,61 +169,81 @@ function Register() {
 
   // FORM SUBMIT
 
-  const sendVerificationLink =
-    async () => {
+  
+      const sendVerificationLink = async () => {
 
-      setVerificationMessage("");
-      setEmailVerified(false);
-      setVerifiedEmail("");
-      setVerificationRequested(false);
+  console.log("BUTTON CLICKED");
 
-      if (!emailValue) {
+  setVerificationMessage("");
+  setEmailVerified(false);
+  setVerifiedEmail("");
+  setVerificationRequested(false);
 
-        setVerificationMessage(
-          "Enter email before sending verification link"
-        );
-        return;
+  if (!emailValue) {
 
+    setVerificationMessage(
+      "Enter email before sending verification link"
+    );
+
+    return;
+
+  }
+
+  try {
+
+    console.log("Sending request...");
+
+    const res = await axios.post(
+
+      `${BASE_URL}/common-api/send-registration-verification`,
+
+      {
+        email: emailValue
+      },
+
+      {
+        withCredentials: true
       }
 
-      try {
+    );
 
-        const res =
-          await axios.post(
-            `${BASE_URL}/common-api/send-registration-verification`,
-            {
-              email: emailValue
-            },
-            {
-              withCredentials: true,
-            }
-          );
+    console.log(res.data);
 
-        setVerificationMessage(
-          res.data.message
-        );
-        setVerificationRequested(true);
+    setVerificationMessage(
+      res.data.message
+    );
 
-      } catch (error) {
+    setVerificationRequested(true);
 
-  console.log(error);
+  }
 
-  console.log(error.response);
+  catch (error) {
 
-  console.log(error.response?.data);
+    console.log("FULL ERROR:", error);
 
-  const message =
-  error.response?.data?.message ||
-  error.message ||
-  "Unable to send verification link";
+    console.log(
+      "RESPONSE:",
+      error.response
+    );
 
-console.log(message);
+    console.log(
+      "DATA:",
+      error.response?.data
+    );
 
-setVerificationMessage(message);
+    setVerificationMessage(
 
-}
+      error.response?.data?.message ||
 
-    };
+      error.message ||
+
+      "Unable to send verification link"
+
+    );
+
+  }
+
+};
 
   const onFormSubmit =
     async (patientData) => {

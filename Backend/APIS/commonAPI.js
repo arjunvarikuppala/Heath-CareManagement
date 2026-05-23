@@ -230,7 +230,7 @@ commonRoute.post(
       await user.save();
 
       const resetLink =
-        `http://localhost:5173/reset-password/${resetToken}`;
+            `https://heath-care-management.vercel.app/reset-password/${resetToken}`;
 
       await sendEmail(
         user.email,
@@ -320,8 +320,7 @@ commonRoute.post(
       });
 
       const verifyLink =
-        `http://localhost:5173/verify-email/${token}`;
-
+  `https://heath-care-management.vercel.app/verify-email/${token}`;
       await sendEmail(
         email,
         "Verify Your CareSync Email",
