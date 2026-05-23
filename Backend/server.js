@@ -84,7 +84,30 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  startAppointmentReminderScheduler();
-});
+const PORT = process.env.PORT || 5000;
+
+const startServer = async () => {
+
+  try {
+
+    await connectDB();
+
+    app.listen(PORT, () => {
+
+      console.log(`Server running on port ${PORT}`);
+
+      startAppointmentReminderScheduler();
+
+    });
+
+  }
+
+  catch (error) {
+
+    console.log(error);
+
+  }
+
+};
+
+startServer();
