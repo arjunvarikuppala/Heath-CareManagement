@@ -368,7 +368,8 @@ function Register() {
       <div
 
         className="absolute top-0 left-0
-        w-[500px] h-[500px]
+        w-[260px] h-[260px]
+        sm:w-[500px] sm:h-[500px]
         bg-cyan-500/20 rounded-full
         blur-3xl -translate-x-1/2
         -translate-y-1/2"
@@ -378,7 +379,8 @@ function Register() {
       <div
 
         className="absolute bottom-0 right-0
-        w-[500px] h-[500px]
+        w-[260px] h-[260px]
+        sm:w-[500px] sm:h-[500px]
         bg-blue-500/20 rounded-full
         blur-3xl translate-x-1/2
         translate-y-1/2"
@@ -464,7 +466,7 @@ function Register() {
         <div
 
           className="flex items-start
-          justify-center px-6 py-10
+          justify-center px-4 sm:px-6 py-8 sm:py-10
           lg:py-14"
 
         >
@@ -478,7 +480,7 @@ function Register() {
             border-white/10
             backdrop-blur-2xl
             rounded-3xl
-            p-8 shadow-2xl"
+            p-6 sm:p-8 shadow-2xl"
 
           >
 
@@ -488,7 +490,7 @@ function Register() {
 
               <h1
 
-                className="text-4xl
+                className="text-3xl sm:text-4xl
                 font-black"
 
               >

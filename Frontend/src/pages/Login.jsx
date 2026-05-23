@@ -69,9 +69,9 @@ function Login() {
 
       {/* BACKGROUND */}
 
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-[260px] h-[260px] sm:w-[500px] sm:h-[500px] bg-cyan-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[260px] h-[260px] sm:w-[500px] sm:h-[500px] bg-blue-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       {/* MAIN */}
 
@@ -117,13 +117,13 @@ function Login() {
 
         {/* RIGHT */}
 
-        <div className="flex items-center justify-center px-6 py-20">
+        <div className="flex items-center justify-center px-4 sm:px-6 py-10 sm:py-20">
 
           <div
 
             className="w-full max-w-xl bg-white/5
             border border-white/10 backdrop-blur-2xl
-            rounded-[2.5rem] p-10 shadow-2xl"
+            rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 shadow-2xl"
 
           >
 
@@ -131,7 +131,7 @@ function Login() {
 
             <div>
 
-              <h1 className="text-5xl font-black">
+              <h1 className="text-4xl sm:text-5xl font-black">
 
                 Login
 

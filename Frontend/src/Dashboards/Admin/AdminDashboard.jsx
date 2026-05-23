@@ -212,14 +212,15 @@ function AdminDashboard() {
 
   return (
 
-    <div className="p-10">
+    <div className="p-4 sm:p-6 lg:p-10">
 
       {/* TOP */}
 
       <div
 
         className="flex
-        items-center
+        flex-col sm:flex-row
+        items-start sm:items-center
         justify-between"
 
       >
@@ -228,7 +229,7 @@ function AdminDashboard() {
 
           <h1
 
-            className="text-5xl
+            className="text-3xl sm:text-5xl
             font-black"
 
           >
@@ -257,9 +258,9 @@ function AdminDashboard() {
       <div
 
         className="grid
-        grid-cols-4
-        gap-6
-        mt-14"
+        grid-cols-1 sm:grid-cols-2 xl:grid-cols-4
+        gap-4 sm:gap-6
+        mt-8 sm:mt-14"
 
       >
 
@@ -276,7 +277,7 @@ function AdminDashboard() {
           className="bg-white/5
           border border-white/10
           rounded-3xl
-          p-8
+          p-6 sm:p-8
           cursor-pointer"
 
         >
@@ -291,7 +292,7 @@ function AdminDashboard() {
 
           <p
 
-            className="text-5xl
+            className="text-4xl sm:text-5xl
             font-black
             mt-4"
 
@@ -328,7 +329,7 @@ function AdminDashboard() {
           className="bg-white/5
           border border-white/10
           rounded-3xl
-          p-8
+          p-6 sm:p-8
           cursor-pointer"
 
         >
@@ -343,7 +344,7 @@ function AdminDashboard() {
 
           <p
 
-            className="text-5xl
+            className="text-4xl sm:text-5xl
             font-black
             mt-4"
 
@@ -380,7 +381,7 @@ function AdminDashboard() {
           className="bg-white/5
           border border-white/10
           rounded-3xl
-          p-8
+          p-6 sm:p-8
           cursor-pointer"
 
         >
@@ -395,7 +396,7 @@ function AdminDashboard() {
 
           <p
 
-            className="text-5xl
+            className="text-4xl sm:text-5xl
             font-black
             mt-4"
 
@@ -432,7 +433,7 @@ function AdminDashboard() {
           className="bg-white/5
           border border-white/10
           rounded-3xl
-          p-8
+          p-6 sm:p-8
           cursor-pointer"
 
         >
@@ -447,7 +448,7 @@ function AdminDashboard() {
 
           <p
 
-            className="text-5xl
+            className="text-4xl sm:text-5xl
             font-black
             mt-4"
 
@@ -475,7 +476,7 @@ function AdminDashboard() {
 
       {/* QUICK ACTIONS */}
 
-      <div className="mt-16">
+      <div className="mt-10 sm:mt-16">
 
         <h2
 
@@ -491,9 +492,9 @@ function AdminDashboard() {
         <div
 
           className="grid
-          grid-cols-3
-          gap-6
-          mt-8"
+          grid-cols-1 sm:grid-cols-3
+          gap-4 sm:gap-6
+          mt-6 sm:mt-8"
 
         >
 
@@ -582,7 +583,7 @@ function AdminDashboard() {
         bg-white/5
         border border-white/10
         rounded-3xl
-        p-10"
+        p-5 sm:p-10"
 
       >
 
@@ -626,7 +627,7 @@ function AdminDashboard() {
           </select>
         </div>
 
-        <div className="mt-8 h-80 rounded-3xl bg-[#0B1120] p-6 flex items-end gap-4">
+        <div className="mt-8 h-72 sm:h-80 rounded-3xl bg-[#0B1120] p-4 sm:p-6 flex items-end gap-2 sm:gap-4 overflow-x-auto">
           {weeklyCounts.map((count, index) => (
             <div
               key={index}

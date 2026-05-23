@@ -42,13 +42,13 @@ function ForgotPassword() {
 
   return (
 
-    <div className="min-h-screen bg-[#050816] text-white flex items-center justify-center px-6">
+    <div className="min-h-screen bg-[#050816] text-white flex items-center justify-center px-4 sm:px-6">
       <form
         onSubmit={handleSubmit}
         autoComplete="on"
-        className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-white/5 p-8"
+        className="w-full max-w-lg rounded-3xl sm:rounded-[2rem] border border-white/10 bg-white/5 p-6 sm:p-8"
       >
-        <h1 className="text-4xl font-black">
+        <h1 className="text-3xl sm:text-4xl font-black">
           Forgot Password
         </h1>
         <p className="text-gray-400 mt-3">

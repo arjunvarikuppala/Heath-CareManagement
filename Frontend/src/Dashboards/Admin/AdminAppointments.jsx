@@ -175,8 +175,8 @@ function AdminAppointments() {
     };
 
   return (
-    <div className="p-10">
-      <h1 className="text-5xl font-black">
+    <div className="p-4 sm:p-6 lg:p-10">
+      <h1 className="text-3xl sm:text-5xl font-black">
         Appointments
       </h1>
       <p className="text-gray-400 mt-3 text-lg">
@@ -202,7 +202,7 @@ function AdminAppointments() {
           >
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div>
-                <p className="text-xl font-black">
+                <p className="text-lg sm:text-xl font-black">
                   {appointment.patientId?.name} with Dr. {appointment.doctorId?.name}
                 </p>
                 <p className="mt-1 text-gray-400">
@@ -231,7 +231,7 @@ function AdminAppointments() {
                     }
                   })
                 }
-                className="h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
+                className="w-full h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
               >
                 {doctors.map((doctor) => (
                   <option key={doctor._id} value={doctor._id}>
@@ -254,7 +254,7 @@ function AdminAppointments() {
                     }
                   })
                 }
-                className="h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
+                className="w-full h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
               />
               <input
                 type="time"
@@ -273,7 +273,7 @@ function AdminAppointments() {
                     }
                   })
                 }
-                className="h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
+                className="w-full h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none"
               />
               <button
                 onClick={() => rescheduleAppointment(appointment)}

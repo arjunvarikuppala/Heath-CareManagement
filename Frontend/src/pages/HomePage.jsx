@@ -6,20 +6,20 @@ function Home() {
 
       {/* BACKGROUND LIGHTS */}
 
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-[280px] h-[280px] sm:w-[600px] sm:h-[600px] bg-cyan-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="absolute top-[30%] right-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl translate-x-1/2" />
+      <div className="absolute top-[30%] right-0 w-[260px] h-[260px] sm:w-[500px] sm:h-[500px] bg-blue-500/20 rounded-full blur-3xl translate-x-1/2" />
 
-      <div className="absolute bottom-0 left-[20%] w-[450px] h-[450px] bg-sky-500/10 rounded-full blur-3xl translate-y-1/2" />
+      <div className="absolute bottom-0 left-[20%] w-[240px] h-[240px] sm:w-[450px] sm:h-[450px] bg-sky-500/10 rounded-full blur-3xl translate-y-1/2" />
 
       {/* HERO SECTION */}
 
       <section
         id="home"
-        className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-28"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-28"
       >
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* LEFT */}
 
@@ -31,7 +31,7 @@ function Home() {
 
             </span>
 
-            <h1 className="text-7xl font-black leading-tight mt-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mt-8 lg:mt-10">
 
               Intelligent
               <span className="text-cyan-400">
@@ -44,7 +44,7 @@ function Home() {
 
             </h1>
 
-            <p className="text-gray-400 text-xl leading-relaxed mt-10 max-w-2xl">
+            <p className="text-gray-400 text-base sm:text-xl leading-relaxed mt-6 lg:mt-10 max-w-2xl">
 
               CareSync transforms hospital operations
               through AI-powered healthcare workflows,
@@ -55,15 +55,15 @@ function Home() {
 
             {/* BUTTONS */}
 
-            <div className="flex gap-6 mt-12">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 lg:mt-12">
 
-              <button className="bg-cyan-400 text-black px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition shadow-2xl shadow-cyan-500/30">
+              <button className="bg-cyan-400 text-black px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-bold hover:scale-105 transition shadow-2xl shadow-cyan-500/30">
 
                 Get Started
 
               </button>
 
-              <button className="border border-white/10 bg-white/5 backdrop-blur-md px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition">
+              <button className="border border-white/10 bg-white/5 backdrop-blur-md px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-semibold hover:bg-white/10 transition">
 
                 Explore Platform
 
@@ -75,12 +75,12 @@ function Home() {
 
             <div
               id="branches"
-              className="flex gap-14 mt-16"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14 mt-10 lg:mt-16"
             >
 
               <div>
 
-                <h2 className="text-5xl font-black text-cyan-400">
+                <h2 className="text-4xl sm:text-5xl font-black text-cyan-400">
 
                   50+
 
@@ -96,7 +96,7 @@ function Home() {
 
               <div>
 
-                <h2 className="text-5xl font-black text-cyan-400">
+                <h2 className="text-4xl sm:text-5xl font-black text-cyan-400">
 
                   10K+
 
@@ -112,7 +112,7 @@ function Home() {
 
               <div>
 
-                <h2 className="text-5xl font-black text-cyan-400">
+                <h2 className="text-4xl sm:text-5xl font-black text-cyan-400">
 
                   500+
 
@@ -142,7 +142,7 @@ function Home() {
 
                 alt="Healthcare"
 
-                className="rounded-[2rem] h-[600px] w-full object-cover"
+                className="rounded-[2rem] h-80 md:h-[520px] lg:h-[600px] w-full object-cover"
 
               />
 
@@ -150,7 +150,7 @@ function Home() {
 
             {/* FLOATING CARD */}
 
-            <div className="absolute -bottom-10 -left-10 bg-white/10 border border-white/10 backdrop-blur-xl rounded-3xl p-6 w-72 shadow-2xl">
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-10 sm:-left-10 bg-white/10 border border-white/10 backdrop-blur-xl rounded-3xl p-5 sm:p-6 w-full sm:w-72 shadow-2xl">
 
               <div className="flex items-center gap-4">
 
@@ -190,10 +190,10 @@ function Home() {
 
       <section
         id="services"
-        className="relative z-10 py-28"
+        className="relative z-10 py-16 lg:py-28"
       >
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
           {/* HEADING */}
 
@@ -205,14 +205,14 @@ function Home() {
 
             </span>
 
-            <h2 className="text-5xl font-bold mt-6">
+            <h2 className="text-3xl sm:text-5xl font-bold mt-6">
 
               Delivering Smarter
               Healthcare Experiences
 
             </h2>
 
-            <p className="text-gray-400 text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
 
               CareSync combines modern technology,
               expert healthcare professionals,
@@ -225,7 +225,7 @@ function Home() {
 
           {/* CARDS */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-12 lg:mt-20">
 
             {/* CARD */}
 
@@ -337,10 +337,10 @@ function Home() {
 
       <section
         id="doctors"
-        className="relative z-10 py-28"
+        className="relative z-10 py-16 lg:py-28"
       >
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
           {/* HEADING */}
 
@@ -352,14 +352,14 @@ function Home() {
 
             </span>
 
-            <h2 className="text-5xl font-bold mt-6">
+            <h2 className="text-3xl sm:text-5xl font-bold mt-6">
 
               Advanced Medical
               Specialties
 
             </h2>
 
-            <p className="text-gray-400 text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
 
               CareSync offers advanced healthcare services
               with expert doctors and cutting-edge medical technologies.
@@ -370,7 +370,7 @@ function Home() {
 
           {/* SPECIALTY CARDS */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-12 lg:mt-20">
 
             {/* CARD */}
 
@@ -388,7 +388,7 @@ function Home() {
 
               <div className="p-8">
 
-                <h3 className="text-3xl font-bold">
+                <h3 className="text-2xl sm:text-3xl font-bold">
 
                   Cardiology
 
@@ -421,7 +421,7 @@ function Home() {
 
               <div className="p-8">
 
-                <h3 className="text-3xl font-bold">
+                <h3 className="text-2xl sm:text-3xl font-bold">
 
                   Neurology
 
@@ -454,7 +454,7 @@ function Home() {
 
               <div className="p-8">
 
-                <h3 className="text-3xl font-bold">
+                <h3 className="text-2xl sm:text-3xl font-bold">
 
                   Pediatrics
 
@@ -481,10 +481,10 @@ function Home() {
 
       <footer
         id="contact"
-        className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-xl pt-24 pb-10"
+        className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-xl pt-16 lg:pt-24 pb-10"
       >
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 border-b border-white/10 pb-16">
 

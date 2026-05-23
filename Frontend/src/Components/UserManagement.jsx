@@ -11,10 +11,10 @@ const BASE_URL =
   import.meta.env.VITE_API_URL;
 
 const inputClassName =
-  "h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none";
+  "w-full h-12 rounded-2xl bg-white/5 border border-white/10 px-4 outline-none";
 
 const selectClassName =
-  "h-12 rounded-2xl bg-[#0B1120] border border-white/10 px-4 outline-none";
+  "w-full h-12 rounded-2xl bg-[#0B1120] border border-white/10 px-4 outline-none";
 
 function UserManagement({
 
@@ -439,7 +439,7 @@ function UserManagement({
       className="min-h-screen
       bg-[#050816]
       text-white
-      p-10"
+      p-4 sm:p-6 lg:p-10"
 
     >
 
@@ -448,14 +448,15 @@ function UserManagement({
       <div
 
         className="flex
-        items-center
+        flex-col sm:flex-row
+        items-start sm:items-center
         justify-between"
 
       >
 
         <h1
 
-          className="text-5xl
+          className="text-3xl sm:text-5xl
           font-black"
 
         >
@@ -573,7 +574,7 @@ function UserManagement({
                   <div
 
                     className="grid
-                    grid-cols-4
+                    grid-cols-1 sm:grid-cols-2 xl:grid-cols-4
                     gap-5 mt-8"
 
                   >
@@ -624,7 +625,7 @@ function UserManagement({
                               alt={user.name}
 
                               className="w-full
-                              h-44
+                              h-40 sm:h-44
                               object-cover
                               rounded-2xl
                               bg-gray-800"
@@ -643,6 +644,7 @@ function UserManagement({
                             <h2
 
                               className="text-2xl
+                              break-words
                               font-black mt-5"
 
                             >
@@ -718,7 +720,8 @@ function UserManagement({
                             <p
 
                               className="text-cyan-400
-                              mt-2 text-sm"
+                              mt-2 text-sm
+                              break-words"
 
                             >
 
@@ -778,10 +781,12 @@ function UserManagement({
 
         <div
           className="fixed
-          right-6
-          bottom-6
+          left-4 right-4
+          bottom-4
+          sm:left-auto sm:right-6
+          sm:bottom-6
           z-40
-          w-[360px]
+          sm:w-[360px]
           rounded-3xl
           border border-cyan-400/20
           bg-[#0B1120]/95
@@ -853,7 +858,7 @@ function UserManagement({
 
           <div
             className="mt-5
-            grid grid-cols-2
+            grid grid-cols-1 sm:grid-cols-2
             gap-3
             text-sm"
           >
@@ -976,7 +981,9 @@ function UserManagement({
           bg-black/70
           flex items-center
           justify-center
-          px-6"
+          px-4 sm:px-6
+          py-6
+          overflow-y-auto"
         >
 
           <form
@@ -984,10 +991,12 @@ function UserManagement({
             autoComplete="off"
             className="w-full
             max-w-3xl
+            max-h-[calc(100vh-3rem)]
+            overflow-y-auto
             bg-[#050816]
             border border-white/10
             rounded-3xl
-            p-8"
+            p-5 sm:p-8"
           >
 
             <div
@@ -998,7 +1007,8 @@ function UserManagement({
             >
 
               <h2
-                className="text-3xl
+              className="text-2xl
+                sm:text-3xl
                 font-black"
               >
 
@@ -1042,8 +1052,8 @@ function UserManagement({
 
             <div
               className="grid
-              grid-cols-2
-              gap-5
+              grid-cols-1 sm:grid-cols-2
+              gap-4 sm:gap-5
               mt-8"
             >
 
@@ -1157,7 +1167,8 @@ function UserManagement({
                 type="file"
                 name="profilePhoto"
                 onChange={handleEditChange}
-                className="col-span-2
+                className="sm:col-span-2
+                w-full
                 h-12 rounded-2xl
                 bg-white/5
                 border border-white/10

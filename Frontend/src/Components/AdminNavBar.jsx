@@ -44,7 +44,7 @@ function AdminNavbar({
       border-b border-white/10
       flex items-center
       justify-between
-      px-8"
+      px-4 sm:px-8"
 
     >
 
@@ -53,7 +53,7 @@ function AdminNavbar({
       <div
 
         className="flex
-        items-center gap-6"
+        items-center gap-3 sm:gap-6"
 
       >
 
@@ -63,7 +63,7 @@ function AdminNavbar({
 
           onClick={toggleSidebar}
 
-          className="w-16 h-16
+          className="w-12 h-12 sm:w-16 sm:h-16
           rounded-2xl
           border border-white/10
           flex items-center
@@ -72,7 +72,7 @@ function AdminNavbar({
         >
 
           <Menu
-            size={32}
+            size={28}
             className="text-cyan-400"
           />
 
@@ -84,7 +84,7 @@ function AdminNavbar({
 
           <h1
 
-            className="text-5xl
+            className="text-3xl sm:text-5xl
             font-black
             text-white"
 
@@ -105,8 +105,8 @@ function AdminNavbar({
           <p
 
             className="text-gray-500
-            tracking-[8px]
-            text-sm"
+            tracking-[3px] sm:tracking-[8px]
+            text-[10px] sm:text-sm"
 
           >
 
@@ -153,7 +153,7 @@ function AdminNavbar({
         <button
           onClick={handleLogout}
           className="h-12
-          px-5
+          px-3 sm:px-5
           rounded-2xl
           bg-cyan-400
           text-black
@@ -166,7 +166,9 @@ function AdminNavbar({
 
           <LogOut size={20} />
 
-          Logout
+          <span className="hidden sm:inline">
+            Logout
+          </span>
 
         </button>
 

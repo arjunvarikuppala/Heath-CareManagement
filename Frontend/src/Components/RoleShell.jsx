@@ -138,11 +138,11 @@ function RoleShell({
       >
 
         <nav
-          className="h-24 bg-[#111827] border-b border-white/10 flex items-center justify-between px-6 lg:px-8"
+          className="h-24 bg-[#111827] border-b border-white/10 flex items-center justify-between px-4 sm:px-6 lg:px-8"
         >
 
           <div
-            className="flex items-center gap-5"
+            className="flex items-center gap-3 sm:gap-5 min-w-0"
           >
 
             <button
@@ -159,7 +159,7 @@ function RoleShell({
             <div>
 
               <h1
-                className="text-3xl lg:text-5xl font-black"
+                className="text-2xl sm:text-3xl lg:text-5xl font-black"
               >
 
                 Care
@@ -170,7 +170,7 @@ function RoleShell({
               </h1>
 
               <p
-                className="text-gray-500 text-xs uppercase tracking-[0.25em]"
+                className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.25em]"
               >
 
                 {subtitle}
@@ -183,11 +183,13 @@ function RoleShell({
 
           <button
             onClick={handleLogout}
-            className="h-12 px-5 rounded-2xl bg-cyan-400 text-black font-black flex items-center gap-2"
+            className="h-12 px-3 sm:px-5 rounded-2xl bg-cyan-400 text-black font-black flex items-center gap-2"
           >
 
             <LogOut size={19} />
-            Logout
+            <span className="hidden sm:inline">
+              Logout
+            </span>
 
           </button>
 

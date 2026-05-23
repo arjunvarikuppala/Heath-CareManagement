@@ -6,13 +6,13 @@ const BASE_URL =
   import.meta.env.VITE_API_URL;
 
 const textInputClassName =
-  "h-14 rounded-2xl bg-white/5 border border-white/10 px-5 outline-none";
+  "w-full h-14 rounded-2xl bg-white/5 border border-white/10 px-5 outline-none";
 
 const selectClassName =
-  "h-14 rounded-2xl bg-[#0B1120] border border-white/10 px-5 outline-none";
+  "w-full h-14 rounded-2xl bg-[#0B1120] border border-white/10 px-5 outline-none";
 
 const fileInputClassName =
-  "col-span-2 h-14 rounded-2xl bg-white/5 border border-white/10 px-5 py-3 outline-none";
+  "w-full sm:col-span-2 min-h-14 rounded-2xl bg-white/5 border border-white/10 px-5 py-3 outline-none";
 
 const baseFields = [
   {
@@ -197,7 +197,7 @@ function AdminRegisterForm({
       text-white
       flex items-center
       justify-center
-      px-6 py-20"
+      px-4 sm:px-6 py-10 sm:py-20"
     >
 
       <div
@@ -206,11 +206,11 @@ function AdminRegisterForm({
         bg-white/5
         border border-white/10
         rounded-3xl
-        p-10"
+        p-6 sm:p-10"
       >
 
         <h1
-          className="text-5xl
+          className="text-3xl sm:text-5xl
           font-black"
         >
 
@@ -245,8 +245,8 @@ function AdminRegisterForm({
           autoComplete="off"
 
           className="mt-10
-          grid grid-cols-2
-          gap-6"
+          grid grid-cols-1 sm:grid-cols-2
+          gap-4 sm:gap-6"
         >
 
           {
@@ -317,7 +317,7 @@ function AdminRegisterForm({
 
             disabled={loading}
 
-            className="col-span-2
+            className="sm:col-span-2
             h-16 rounded-2xl
             bg-cyan-400
             text-black

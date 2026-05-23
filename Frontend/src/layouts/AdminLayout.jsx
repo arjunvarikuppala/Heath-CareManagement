@@ -65,7 +65,7 @@ function AdminLayout() {
 
             ?
 
-            "ml-80"
+            "lg:ml-80"
 
             :
 

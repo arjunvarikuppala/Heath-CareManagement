@@ -67,7 +67,8 @@ function VerifyEmail() {
       bg-[#050816]
       flex items-center
       justify-center
-      text-white"
+      text-white
+      px-4"
 
     >
 
@@ -75,7 +76,7 @@ function VerifyEmail() {
 
         className="bg-white/5
         border border-white/10
-        rounded-3xl p-12
+        rounded-3xl p-6 sm:p-12
         text-center"
 
       >
@@ -109,7 +110,7 @@ function VerifyEmail() {
 
             <h1
 
-              className="text-5xl
+              className="text-3xl sm:text-5xl
               font-black
               text-cyan-400"
 
@@ -123,7 +124,7 @@ function VerifyEmail() {
 
               className="mt-6
               text-gray-400
-              text-xl"
+              text-base sm:text-xl"
 
             >
 
@@ -145,7 +146,7 @@ function VerifyEmail() {
 
             <h1
 
-              className="text-5xl
+              className="text-3xl sm:text-5xl
               font-black
               text-red-400"
 
@@ -159,7 +160,7 @@ function VerifyEmail() {
 
               className="mt-6
               text-gray-400
-              text-xl"
+              text-base sm:text-xl"
 
             >
 

@@ -17,7 +17,7 @@ function CheckEmail() {
       bg-[#050816]
       flex items-center
       justify-center
-      text-white px-6"
+      text-white px-4 sm:px-6"
 
     >
 
@@ -25,14 +25,14 @@ function CheckEmail() {
 
         className="bg-white/5
         border border-white/10
-        rounded-3xl p-12
+        rounded-3xl p-6 sm:p-12
         text-center max-w-xl"
 
       >
 
         <h1
 
-          className="text-5xl
+          className="text-3xl sm:text-5xl
           font-black text-cyan-400"
 
         >
@@ -44,7 +44,7 @@ function CheckEmail() {
         <p
 
           className="mt-6 text-gray-400
-          text-xl leading-relaxed"
+          text-base sm:text-xl leading-relaxed"
 
         >
 
@@ -55,7 +55,7 @@ function CheckEmail() {
         <p
 
           className="mt-4
-          text-cyan-300 text-lg"
+          text-cyan-300 text-base sm:text-lg break-words"
 
         >
 
