@@ -1,229 +1,385 @@
-# 🏥 CareFlow – Hospital Management System (HMS)
+<div align="center">
 
-## Introduction
-CareSync is a full-stack Hospital Management System developed using the MERN stack (MongoDB, Express.js, React.js, and Node.js).
-The main objective of this project is to simplify and digitize hospital management activities such as appointment booking, patient record handling, doctor management, prescription generation, medical report uploads, appointment reminders, and administrative operations.
-The system uses role-based access control so that different users can access only their respective functionalities securely.
+# 🏥 Health Care Management System  
+# ⚙️ Full Stack Architecture & Technical Documentation
 
-## Project Objective
-The objective of this project is:
-* Reduce manual hospital processes
-* Provide secure authentication and authorization
-* Manage doctors, patients, and appointments efficiently
-* Maintain medical records digitally
-* Improve communication among patients, doctors, receptionists, and administrators
-* Provide centralized hospital management
+This document serves as the complete technical documentation for the **Health Care Management System** project.  
+It explains the frontend architecture, backend architecture, routing system, authentication flow, database structure, API integration, installation setup, and complete project workflow.
 
-## Repository Structure
+</div>
+
+---
+
+# 📌 1. Project Overview
+
+The **Health Care Management System** is a full-stack web application developed to simplify hospital and healthcare operations digitally.
+
+The application provides functionalities for:
+
+- Patient Management
+- Doctor Management
+- Appointment Booking
+- Authentication & Authorization
+- Dashboard Management
+- Healthcare Data Handling
+- Responsive User Interface
+
+The system follows a modular architecture using modern web technologies for scalability, maintainability, and security.
+
+---
+
+# 🏗️ 2. System Architecture
+
+The project follows a **Full Stack Client-Server Architecture**.
+
+```text
+Frontend (React.js)
+        │
+        ▼
+REST API Communication
+        │
+        ▼
+Backend Server (Node.js + Express.js)
+        │
+        ▼
+MongoDB Database
+```
+
+---
+
+# 🎨 3. Frontend Architecture
+
+The frontend is developed using **React.js** with reusable components and client-side routing.
+
+### Frontend Responsibilities
+
+- UI Rendering
+- Route Navigation
+- API Communication
+- Authentication Handling
+- State Management
+- Form Validation
+- Responsive Design
+
+### Frontend Features
+
+- Responsive Dashboard
+- Doctor Listing
+- Appointment Booking
+- Authentication Pages
+- Dynamic Routing
+- Protected Pages
+
+---
+
+# ⚙️ 4. Backend Architecture
+
+The backend is developed using **Node.js** and **Express.js** following REST API architecture.
+
+### Backend Responsibilities
+
+- API Development
+- Database Management
+- Authentication
+- Authorization
+- Request Validation
+- Error Handling
+- Business Logic Processing
+
+### Backend Features
+
+- JWT Authentication
+- Secure APIs
+- MongoDB Integration
+- CRUD Operations
+- Appointment Management
+- Doctor & Patient Data Handling
+
+---
+
+# 📂 5. Complete Project Structure
+
+```text
 Health-CareManagement/
-├── Backend/
-│   ├── APIs/                 # Express route modules
-│   ├── Config/               # Database and application configurations
-│   ├── Models/               # Mongoose schemas
-│   ├── Services/             # Business logic and reusable services
-│   ├── MiddleWares/          # JWT and role validation middleware
-│   ├── Utils/                # Utility/helper functions
-│   ├── .env                  # Environment variables
-│   ├── .gitignore
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── req.http              # API testing requests
-│   └── server.js             # Backend entry point
 │
-├── Frontend/
+├── frontend/
 │   ├── public/
 │   ├── src/
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── vercel.json
-│   └── vite.config.js
+│   │   ├── Components/
+│   │   ├── Pages/
+│   │   ├── Services/
+│   │   ├── Context/
+│   │   ├── Routes/
+│   │   ├── Assets/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
 │
-├── Heath-CareManagement
+├── backend/
+│   ├── APIs/
+│   ├── Models/
+│   ├── Middlewares/
+│   ├── Services/
+│   ├── database/
+│   ├── server.js
+│   └── package.json
+│
 └── README.md
+```
 
-## Technologies Used
+---
 
-### Frontend
-* React.js
-* React Router DOM
-* Axios
-* Lucide React Icons
-* CSS
+# 🚀 6. Installation & Setup
 
-### Backend
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
+## 1️⃣ Clone Repository
 
-### Authentication & Security
-* JWT Authentication
-* Protected Routes
-* Role-Based Access Control
+```bash
+git clone https://github.com/Geetavarshini/Heath-CareManagement.git
+```
 
-### Additional Libraries
-* Multer
-* Cloudinary
-* Cookie Parser
-* CORS
+---
 
-# User Roles in the System
-The system contains four types of users:
+## 2️⃣ Navigate to Project Directory
 
-## 1. Patient
-Patients can register and log in to the system. They can access doctor information, schedule appointments, upload reports, and manage their healthcare records.
+```bash
+cd Heath-CareManagement
+```
 
-### Patient Features
-* Registration and login
-* View doctor details
-* Book appointments
-* Upload medical reports
-* View prescriptions
-* View appointment history
-* Dashboard analytics
+---
 
-## 2. Doctor
-Doctors are created and managed directly by the administrator. The administrator provides account credentials and system access permissions.
-Doctors can log in and manage patient-related activities through their dashboard.
+# 🖥️ Frontend Setup
 
-### Doctor Features
-* Login through administrator-provided access
-* View appointments
-* Confirm or complete appointments
-* Create prescriptions
-* View prescription history
-* Configure available time slots
-* View patient reports
-* Dashboard analytics
+## Install Frontend Dependencies
 
-## 3. Receptionist
-Receptionists assist in managing appointment-related activities and patient scheduling within the hospital.
+```bash
+cd frontend
+npm install
+```
 
-### Receptionist Features
-* Login to the system
-* Book appointments for walk-in patients
-* Reschedule appointments
-* View appointment details
-* Manage appointment schedules
-* Send appointment reminder emails
-* Dashboard analytics
+---
 
-## 4. Admin
-Admins manage the complete hospital system and have full control over users and hospital activities.
+## Start Frontend Server
 
-### Admin Features
-* Create doctors and receptionists
-* Edit doctors and receptionists
-* View all users
-* View all appointments
-* Block or enable user accounts
-* Manage hospital operations
-* Send appointment reminder emails
-* View audit logs
-* Dashboard analytics
+```bash
+npm run dev
+```
 
-# Email Reminder System
-The Email Reminder System helps users stay updated regarding important hospital activities and appointment schedules.
-It improves communication between patients, doctors, receptionists, and hospital administrators through automated reminder emails.
+Frontend runs on:
 
-### Features include:
-* Appointment confirmation emails
-* Upcoming appointment reminder emails
-* Appointment status update emails
-* Reduced missed appointments
-* Improved communication among users
+```text
+http://localhost:5173
+```
 
-# System Workflow
+---
 
-## Patient Workflow
-Patient Registration/Login
-↓
-View Doctors
-↓
-Book Appointment
-↓
-Doctor Receives Appointment
-↓
-Doctor Consultation
-↓
-Doctor Creates Prescription
-↓
-Patient Views Prescription
-↓
-Patient Uploads Reports
+# ⚙️ Backend Setup
 
-## Doctor Workflow
+## Install Backend Dependencies
 
-Administrator Creates Doctor
-↓
-Administrator Provides Credentials
-↓
-Doctor Login
-↓
-Dashboard Access Granted
-↓
-Manage Appointments
-↓
-Create Prescriptions
-↓
-Configure Available Slots
-↓
-View Patient Reports
+```bash
+cd backend
+npm install
+```
 
-## Receptionist Workflow
+---
 
-Receptionist Login
-↓
-Book Walk-in Patient Appointments
-↓
-Manage Appointment Schedules
-↓
-Reschedule Appointments
-↓
-Send Reminder Emails
-↓
-Monitor Appointment Status
+## Create `.env` File
 
-## Admin Workflow
+```env
+PORT=4000
+DB_URL=your_mongodb_connection_string
+JWT_SECRET_KEY=your_secret_key
+```
 
-Admin Login
-↓
-Create Doctors and Receptionists
-↓
-Manage Users
-↓
-View All Appointments
-↓
-Block/Enable Users
-↓
-Monitor Hospital Activities
-↓
-View Audit Logs
+---
 
-# Security Features
-The system provides several security mechanisms:
-* JWT-based authentication
-* Protected routes
-* Role-based authorization
-* Account activation/deactivation
-* Secure API access
+## Start Backend Server
 
-# Future Enhancements
-Future improvements that can be added:
-* Video consultation
-* Online payment system
-* SMS reminders
-* AI-based symptom prediction
-* Chat functionality
-* Telemedicine support
+```bash
+npm start
+```
 
-## Conclusion
+or
 
-CareSync Hospital Management System provides a centralized and efficient digital platform for managing hospital operations. The system simplifies interactions among patients, doctors, receptionists, and administrators by reducing manual work and streamlining daily processes.
+```bash
+nodemon server.js
+```
 
-Features such as appointment management, prescription generation, medical report handling, role-based access control, and automated email reminder services create a secure and user-friendly healthcare environment.
+Backend runs on:
 
-By integrating multiple hospital functionalities into a single platform, CareSync enhances communication, improves operational efficiency, and demonstrates the practical implementation of MERN stack technologies in building a real-world healthcare management solution.
+```text
+http://localhost:4000
+```
+
+---
+
+# 📦 7. Technology Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| React.js | Frontend framework |
+| Node.js | Backend runtime |
+| Express.js | REST API framework |
+| MongoDB | Database |
+| Mongoose | MongoDB ODM |
+| JWT | Authentication |
+| Axios | API communication |
+| React Router DOM | Client-side routing |
+| Bootstrap / CSS | UI styling |
+| Vite | Frontend build tool |
+| dotenv | Environment variables |
+| bcryptjs | Password hashing |
+| cors | Frontend-backend communication |
+
+---
+
+# 🌐 8. Frontend Routing Structure
+
+| Route | Purpose |
+| :--- | :--- |
+| `/` | Home page |
+| `/login` | User login |
+| `/register` | User registration |
+| `/dashboard` | User dashboard |
+| `/appointments` | Appointment management |
+| `/doctors` | Doctor listing |
+
+---
+
+# 🔗 9. Backend API Routes
+
+## Authentication Routes
+
+| Method | Endpoint | Purpose |
+| :--- | :--- | :--- |
+| POST | `/register` | Register new user |
+| POST | `/login` | User login |
+| GET | `/logout` | Logout user |
+
+---
+
+## Doctor Routes
+
+| Method | Endpoint | Purpose |
+| :--- | :--- | :--- |
+| GET | `/doctors` | Fetch all doctors |
+| POST | `/doctors` | Add new doctor |
+| PUT | `/doctors/:id` | Update doctor |
+| DELETE | `/doctors/:id` | Delete doctor |
+
+---
+
+## Appointment Routes
+
+| Method | Endpoint | Purpose |
+| :--- | :--- | :--- |
+| POST | `/appointments` | Book appointment |
+| GET | `/appointments` | Fetch appointments |
+| DELETE | `/appointments/:id` | Cancel appointment |
+
+---
+
+# 🗄️ 10. Database Models
+
+## 👨‍⚕️ Doctor Model
+
+Stores:
+
+- Doctor Name
+- Specialization
+- Experience
+- Availability
+- Contact Information
+
+---
+
+## 👤 Patient Model
+
+Stores:
+
+- Patient Name
+- Email
+- Contact Details
+- Medical Information
+
+---
+
+## 📅 Appointment Model
+
+Stores:
+
+- Appointment Date
+- Doctor Details
+- Patient Details
+- Appointment Status
+
+---
+
+# 🔐 11. Authentication & Security
+
+The application implements secure authentication mechanisms:
+
+- JWT Token Authentication
+- Password Hashing using bcrypt
+- Protected Routes
+- Environment Variable Security
+- Secure API Communication
+
+---
+
+# 🔄 12. Frontend & Backend Communication
+
+The frontend communicates with the backend using REST APIs.
+
+### Communication Features
+
+- Axios API requests
+- Dynamic data rendering
+- Authentication token handling
+- Real-time UI updates
+- Error handling & validations
+
+---
+
+# ⚡ 13. Performance Optimizations
+
+- Modular architecture
+- Reusable components
+- Optimized API communication
+- Efficient database queries
+- Lightweight frontend rendering
+- Fast development using Vite
+
+---
+
+# ✅ 14. Features Summary
+
+- User Authentication
+- Doctor Management
+- Patient Management
+- Appointment Booking
+- Dashboard System
+- REST API Integration
+- Responsive UI
+- Protected Routes
+- Full Stack Architecture
+
+---
+
+# 📌 15. Future Enhancements
+
+- Online Payment Integration
+- Video Consultation
+- Real-Time Notifications
+- Medical Report Upload
+- AI-Based Health Suggestions
+- Dark Mode
+
+---
+
+# 👩‍💻 Developed By
+
+**Team-30**  
+B.Tech – Anurag University
+
+---
